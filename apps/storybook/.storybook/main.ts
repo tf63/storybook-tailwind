@@ -6,10 +6,26 @@ import { mergeConfig } from 'vite'
 
 const config: StorybookConfig = {
     stories: [
-        '../../../apps/*/src/**/*.stories.*',
-        '../../../apps/*/src/**/*.mdx',
-        '../../../packages/*/src/**/*.stories.*',
-        '../../../packages/*/src/**/*.mdx',
+        {
+            directory: '../../../apps/app1/src',
+            files: '**/*.stories.*',
+            titlePrefix: 'App1',
+        },
+        {
+            directory: '../../../apps/app2/src',
+            files: '**/*.stories.*',
+            titlePrefix: 'App2',
+        },
+        {
+            directory: '../../../apps/app3/src',
+            files: '**/*.stories.*',
+            titlePrefix: 'App3',
+        },
+        {
+            directory: '../../../packages/ui/src',
+            files: '**/*.stories.*',
+            titlePrefix: 'UI',
+        },
     ],
     addons: [
         '@chromatic-com/storybook',
