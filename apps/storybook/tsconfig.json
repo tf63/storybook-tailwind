@@ -1,7 +1,8 @@
 {
     "extends": "@repo/typescript/tsconfig.react.json",
     "compilerOptions": {
-        "types": ["@testing-library/jest-dom", "node", "vitest/globals"]
+        "types": ["@testing-library/jest-dom", "node", "vitest/globals"],
+        "esModuleInterop": true
     },
     "include": [".storybook/*"]
 }
